@@ -3,9 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <title>InSAR</title>
-    <style>img{width:100%}</style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .menu {
+            padding: 20px;
+            background: #f5f5f5;
+            margin-bottom: 20px;
+        }
+        .menu a {
+            display: inline-block;
+            margin: 0 15px;
+            font-size: 18px;
+            color: #2d6aee;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .menu a:hover {
+            color: #ff5722;
+        }
+        img {
+            width: 100%;
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <img src="INSAR.jpg">
+    <!-- 选项菜单 -->
+    <div class="menu">
+        <a onclick="showImage()">雷达干涉测量杂谈一</a>
+        <a onclick="openPdf()">微波遥感杂谈一</a>
+    </div>
+
+    <!-- 默认显示图片 -->
+    <img id="showImg" src="INSAR.jpg">
+
+    <script>
+        // 显示图片
+        function showImage() {
+            document.getElementById("showImg").src = "INSAR.jpg";
+        }
+
+        // 打开PDF（新标签页）
+        function openPdf() {
+            window.open("https://github.com/ZZM-LAB/CSDN-link/raw/main/%E6%89%AB%E6%8F%8F%E4%BB%B6_%E5%BE%AE%E6%B3%A2%E9%81%A5%E6%84%9F%E5%8E%9F%E7%90%86.pdf", "_blank");
+        }
+    </script>
 </body>
 </html>
